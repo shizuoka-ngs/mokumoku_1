@@ -9,6 +9,15 @@
 minicondaでのインストールで問題ないだろうと思います。__インストールするライブラリが多いので少し時間がかかります。__
 
 ```sql
+
+```
+$ conda update conda
+$ conda install wget
+
+$ wget https://data.qiime2.org/distro/core/qiime2-2019.7-py36-osx-conda.yml
+$ conda env create -n qiime2-2019.7 --file qiime2-2019.7-py36-osx-conda.yml
+
+```
 $ conda info -e
 # conda environments:
 #
@@ -66,6 +75,8 @@ qiime tools import \
 
 ## [Demultiplexing sequences](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#demultiplexing-sequences)
 
+配列をサンプルに関連するようdemultiplexingします。
+
 ```
 qiime demux emp-single \
   --i-seqs emp-single-end-sequences.qza \
@@ -83,3 +94,8 @@ qiime demux summarize \
 
 **demux.qzv**が出力できたら、[qiime2のview https://view.qiime2.org](https://view.qiime2.org)に
 ファイルをドラッグして確認してみます。
+
+## [Sequence quality control and feature table construction](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#sequence-quality-control-and-feature-table-construction)
+
+QCとしてDADA2とDeblurを適用します。
+
