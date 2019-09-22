@@ -55,5 +55,24 @@ wget \
   
 ```
 
+## 配列をsamplesにアサイン
+
+```
+qiime tools import \
+  --type EMPSingleEndSequences \
+  --input-path emp-single-end-sequences \
+  --output-path emp-single-end-sequences.qza
+```
+
 ## [Demultiplexing sequences](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#demultiplexing-sequences)
 
+```
+qiime demux emp-single \
+  --i-seqs emp-single-end-sequences.qza \
+  --m-barcodes-file sample-metadata.tsv \
+  --m-barcodes-column barcode-sequence \
+  --o-per-sample-sequences demux.qza \
+  --o-error-correction-details demux-details.qza
+```
+
+demux.qza, demux-details.qza が出力されたらOK
