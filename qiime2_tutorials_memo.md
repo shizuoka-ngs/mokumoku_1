@@ -159,7 +159,7 @@ mv rep-seqs-deblur.qza rep-seqs.qza
 mv table-deblur.qza table.qza
 ```
 
-[FeatureTable and FeatureData summaries](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#featuretable-and-featuredata-summaries)
+## [FeatureTable and FeatureData summaries](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#featuretable-and-featuredata-summaries)
 
 それぞれのフィーチャー（クラスターを代表する配列）にどれだけの配列が関連するか要約したテーブルを生成します。
 
@@ -173,3 +173,15 @@ qiime feature-table tabulate-seqs \
   --o-visualization rep-seqs.qzv
 ```
 
+## [Generate a tree for phylogenetic diversity analyses](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#generate-a-tree-for-phylogenetic-diversity-analyses)
+
+系統樹の生成
+
+```
+qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences rep-seqs.qza \
+  --o-alignment aligned-rep-seqs.qza \
+  --o-masked-alignment masked-aligned-rep-seqs.qza \
+  --o-tree unrooted-tree.qza \
+  --o-rooted-tree rooted-tree.qza
+```
