@@ -16,7 +16,6 @@ $ conda install wget
 
 $ wget https://data.qiime2.org/distro/core/qiime2-2019.7-py36-osx-conda.yml
 $ conda env create -n qiime2-2019.7 --file qiime2-2019.7-py36-osx-conda.yml
-
 ```
 
 ```
@@ -100,4 +99,77 @@ qiime demux summarize \
 ## [Sequence quality control and feature table construction](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#sequence-quality-control-and-feature-table-construction)
 
 QCとしてDADA2とDeblurを適用します。
+
+### DADA2を実行する
+
+[DADA2](https://www.ncbi.nlm.nih.gov/pubmed/27214047)は **Illumina amplicon sequence** を検出し、補正するとのこと。
+
+```
+qiime dada2 denoise-single \
+  --i-demultiplexed-seqs demux.qza \
+  --p-trim-left 0 \
+  --p-trunc-len 120 \
+  --o-representative-sequences rep-seqs-dada2.qza \
+  --o-table table-dada2.qza \
+  --o-denoising-stats stats-dada2.qza
+```
+
+visualizationの出力
+
+```
+qiime metadata tabulate \
+  --m-input-file stats-dada2.qza \
+  --o-visualization stats-dada2.qzv
+```
+
+```
+mv rep-seqs-dada2.qza rep-seqs.qza
+mv table-dada2.qza table.qza
+```
+
+QCにDADA2を採用する場合下記を実行し、出力したファイルのファイルネームを変えておく。
+
+```
+mv rep-seqs-dada2.qza rep-seqs.qza
+mv table-dada2.qza table.qza
+```
+
+### Deblurを実行する
+
+```
+qiime quality-filter q-score \
+ --i-demux demux.qza \
+ --o-filtered-sequences demux-filtered.qza \
+ --o-filter-stats demux-filter-stats.qza
+```
+
+```
+qiime deblur denoise-16S \
+  --i-demultiplexed-seqs demux-filtered.qza \
+  --p-trim-length 120 \
+  --o-representative-sequences rep-seqs-deblur.qza \
+  --o-table table-deblur.qza \
+  --p-sample-stats \
+  --o-stats deblur-stats.qza
+```
+QCにDeblurを採用する場合下記を実行して、ファイルネームを変更する。
+
+```
+mv rep-seqs-deblur.qza rep-seqs.qza
+mv table-deblur.qza table.qza
+```
+
+[FeatureTable and FeatureData summaries](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#featuretable-and-featuredata-summaries)
+
+それぞれのフィーチャー（クラスターを代表する配列）にどれだけの配列が関連するか要約したテーブルを生成します。
+
+```
+qiime feature-table summarize \
+  --i-table table.qza \
+  --o-visualization table.qzv \
+  --m-sample-metadata-file sample-metadata.tsv
+qiime feature-table tabulate-seqs \
+  --i-data rep-seqs.qza \
+  --o-visualization rep-seqs.qzv
+```
 
