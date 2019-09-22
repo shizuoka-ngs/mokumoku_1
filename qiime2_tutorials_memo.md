@@ -8,7 +8,7 @@
 [Natively installing QIIME2](https://docs.qiime2.org/2019.7/install/native/#natively-installing-qiime-2)で
 minicondaでのインストールで問題ないだろうと思います。__インストールするライブラリが多いので少し時間がかかります。__
 
-```sql
+
 
 ```
 $ conda update conda
@@ -16,6 +16,8 @@ $ conda install wget
 
 $ wget https://data.qiime2.org/distro/core/qiime2-2019.7-py36-osx-conda.yml
 $ conda env create -n qiime2-2019.7 --file qiime2-2019.7-py36-osx-conda.yml
+
+```
 
 ```
 $ conda info -e
