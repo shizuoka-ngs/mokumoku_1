@@ -75,4 +75,11 @@ qiime demux emp-single \
   --o-error-correction-details demux-details.qza
 ```
 
-demux.qza, demux-details.qza が出力されたらOK
+```
+qiime demux summarize \
+  --i-data demux.qza \
+  --o-visualization demux.qzv
+```
+
+**demux.qzv**が出力できたら、[qiime2のview https://view.qiime2.org](https://view.qiime2.org)に
+ファイルをドラッグして確認してみます。
