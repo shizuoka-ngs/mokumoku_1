@@ -255,6 +255,11 @@ qiime taxa barplot \
 
 [Differential abundance testing with ANCOM](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#differential-abundance-testing-with-ancom)
 
+###ANCOMとは？
+Analysis of Composition of Microbiomes
+[論文]https://www.tandfonline.com/doi/full/10.3402/mehd.v26.27663
+
+
 ```
 qiime feature-table filter-samples \
   --i-table table.qza \
