@@ -257,7 +257,7 @@ qiime taxa barplot \
 
 ###ANCOMとは？
 Analysis of Composition of Microbiomes
-[論文]https://www.tandfonline.com/doi/full/10.3402/mehd.v26.27663
+[論文](https://www.tandfonline.com/doi/full/10.3402/mehd.v26.27663)
 
 
 ```
