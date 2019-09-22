@@ -98,7 +98,7 @@ qiime demux summarize \
 
 ## [Sequence quality control and feature table construction](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#sequence-quality-control-and-feature-table-construction)
 
-QCとしてDADA2とDeblurを適用します。
+QCとしてDADA2またはDeblurを適用します。
 
 ### DADA2を実行する
 
