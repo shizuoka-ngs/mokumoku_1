@@ -34,7 +34,12 @@ source activate qiime2-2019.7
 
 ## [qiime2 tutorials](https://docs.qiime2.org/2019.7/tutorials/)
 
-### [workflows https://docs.qiime2.org/2019.7/tutorials/overview/#overview-of-qiime-2-plugin-workflows](https://docs.qiime2.org/2019.7/tutorials/overview/#overview-of-qiime-2-plugin-workflows)
+今回のもくもく会は、ほぼ qiime2 tutorial　（[https://docs.qiime2.org/2019.7/tutorials/](https://docs.qiime2.org/2019.7/tutorials/)） どうりの操作を行います。
+
+操作の意味するところはを確認したい場合はtutorialを読んでください。
+
+### [workflows](https://docs.qiime2.org/2019.7/tutorials/overview/#overview-of-qiime-2-plugin-workflows)
+
 
 ### [メタデータ取得](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#sample-metadata)
 
