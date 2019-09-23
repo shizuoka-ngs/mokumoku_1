@@ -39,7 +39,7 @@ source activate qiime2-2019.7
 操作の意味するところはを確認したい場合はtutorialを読んでください。
 
 - [用語説明](https://docs.qiime2.org/2019.7/glossary/#glossary)　（以下一部要約抜粋）
-- .qzaファイル : ArtifactというQIIME methodの入力/出力ファイル
+- .qzaファイル : QIIME methodの入力/出力ファイルでArtifactと呼ばれる
 - .qzvファイル : QIIME visualizerで作成された出力ファイル
      
 
@@ -79,6 +79,8 @@ wget \
 ```
 
 ## 配列をsamplesにアサイン
+
+- 上記の操作で取得したfastq.gzファイルをQiime 2で使えるようにArtifact（.qza）にimportする
 
 ```
 qiime tools import \
