@@ -38,6 +38,11 @@ source activate qiime2-2019.7
 
 操作の意味するところはを確認したい場合はtutorialを読んでください。
 
+- [用語説明](https://docs.qiime2.org/2019.7/glossary/#glossary)　（以下一部要約抜粋）
+- .qzaファイル : ArtifactというQIIME methodの入力/出力ファイル
+- .qzvファイル : QIIME visualizerで作成された出力ファイル
+     
+
 ### [workflows](https://docs.qiime2.org/2019.7/tutorials/overview/#overview-of-qiime-2-plugin-workflows)
 
 
@@ -260,8 +265,10 @@ qiime taxa barplot \
 
 [Differential abundance testing with ANCOM](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#differential-abundance-testing-with-ancom)
 
-###ANCOMとは？
-Analysis of Composition of Microbiomes
+### ANCOMとは？
+
+Analysis of Composition of Microbiomes の略
+
 [論文](https://www.tandfonline.com/doi/full/10.3402/mehd.v26.27663)
 
 
