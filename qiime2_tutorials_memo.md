@@ -56,6 +56,9 @@ wget \
   "https://data.qiime2.org/2019.7/tutorials/moving-pictures/sample_metadata.tsv"
 ```
 
+- [Caporaso et al. (2011)](https://www.ncbi.nlm.nih.gov/pubmed/21624126)のデータを本チュートリアルに使用
+- 2名の４部位（gut, left palm, right palm, tongue）, ５時点（2008年10月, 2009年1,2,3,4月）
+
 ### [データ取得](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#obtaining-and-importing-data)
 
 tutorialsでは配列のサブセットを使います。以下のコマンドを実行しデータを取得してください。
