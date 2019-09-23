@@ -38,7 +38,7 @@ source activate qiime2-2019.7
 
 ### [メタデータ取得](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#sample-metadata)
 
-wgetの場合は
+wgetの場合は（wgetを強く推奨します）
 
 ```
 wget \
