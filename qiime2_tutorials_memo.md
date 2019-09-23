@@ -270,11 +270,8 @@ qiime taxa barplot \
 
 [Differential abundance testing with ANCOM](https://docs.qiime2.org/2019.7/tutorials/moving-pictures/#differential-abundance-testing-with-ancom)
 
-### ANCOMとは？
-
-Analysis of Composition of Microbiomes の略
-
-[論文](https://www.tandfonline.com/doi/full/10.3402/mehd.v26.27663)
+- ANCOMは[Analysis of Composition of Microbiomes](https://www.tandfonline.com/doi/full/10.3402/mehd.v26.27663) の略
+- ２つ以上の集団のマイクロバイオームの組成を比較できる解析手法
 
 
 ```
