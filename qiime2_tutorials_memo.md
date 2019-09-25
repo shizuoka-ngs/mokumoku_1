@@ -34,7 +34,7 @@ source activate qiime2-2019.7
 
 ## [qiime2 tutorials](https://docs.qiime2.org/2019.7/tutorials/)
 
-今回のもくもく会は、ほぼ qiime2 tutorial　（[https://docs.qiime2.org/2019.7/tutorials/](https://docs.qiime2.org/2019.7/tutorials/)） どうりの操作を行います。
+今回のもくもく会は、ほぼ qiime2 tutorial　（[https://docs.qiime2.org/2019.7/tutorials/](https://docs.qiime2.org/2019.7/tutorials/)） どおりの操作を行います。
 
 操作の意味するところはを確認したい場合はtutorialを読んでください。
 
